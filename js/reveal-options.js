@@ -43,6 +43,7 @@ var ykDefaultOptions = {
         sign: "{\\mathop{\\bf sign}}",
         IID: "{\\mathop{\\rm IID}}",
         ind: "{\\mathop{\\rm ind}}",
+        indep: "{\\,\\perp\\!\\!\\!\\!\\perp\\,}",
         bA: "{\\mathbf{A}}",
         bB: "{\\mathbf{B}}",
         bC: "{\\mathbf{C}}",

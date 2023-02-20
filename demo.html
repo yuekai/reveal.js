@@ -16,10 +16,26 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/YK.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			canvas.fullpage {
+				display:block; 
+				margin: 0 auto;
+			}
+			.column {
+				float: left;
+  			width: 50%;
+			}
+			.row::after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -399,9 +415,15 @@
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an example:</p>
-					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					<section>
+						<h2>Export to PDF</h2>
+						<p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an example:</p>
+						<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					</section>
+
+					<section>
+						<canvas class="fullpage" data-pdf-src="http://web.stanford.edu/class/ee364b/lectures/distribution_robust_slides.pdf" data-pdf-page=1></canvas>
+					</section>
 				</section>
 
 				<section>
@@ -461,20 +483,22 @@ Reveal.on( 'customevent', function() {
 		<script src="plugin/search/search.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script src="js/reveal-options.js"></script>
+		<script src="node_modules/reveal-pdf/dist/reveal-pdf.js"></script>
 		<script>
+			options.controls = true
+			options.progress = true
+			options.hash = true
+			options.mathjax3.tex.macros["CVaR"] = "{\\mathrm{CVaR}}"
+			options.plugins.push(RevealZoom)
+			options.plugins.push(RevealSearch)
+			options.plugins.push(RevealPdf)
 
-			// Also available as an ES module, see:
-			// https://revealjs.com/initialization/
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				center: true,
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-			});
-
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize(options);
 		</script>
 
 	</body>

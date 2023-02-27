@@ -127,6 +127,11 @@
    margin-bottom: 0;
  }
  
+ .reveal canvas.fullpage {
+   display:block; 
+   margin: 0 auto;
+ }
+
  /* Ensure certain elements are never larger than the slide itself */
  .reveal img,
  .reveal video,
@@ -301,7 +306,7 @@
    display: inline-block;
    font-size: 0.6em;
    line-height: 1.2em;
-   vertical-align: top;
+   /* vertical-align: top; */
  }
  
  .reveal small * {
@@ -312,10 +317,29 @@
    margin: var(--r-block-margin) 0;
  }
 
+ .reveal p.img img {
+  margin: 0;
+}
+
+ .reveal p.img {
+  text-align: center;
+ }
+
  .reveal p.caption {
   font-size: 0.6em;
   line-height: 1.2em;
   text-align: center;
+ }
+
+ .reveal .row::after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+
+ .reveal .column {
+  float: left;
+  width: 50%;
  }
  
  /*********************************************

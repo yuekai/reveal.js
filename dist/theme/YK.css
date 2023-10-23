@@ -317,29 +317,27 @@
    margin: var(--r-block-margin) 0;
  }
 
- .reveal p.img img {
-  margin: 0;
-}
-
- .reveal p.img {
-  text-align: center;
+ .reveal p img {
+   border: none; 
+   display: block; 
+   margin: var(--r-block-margin) auto;
  }
 
  .reveal p.caption {
-  font-size: 0.6em;
-  line-height: 1.2em;
-  text-align: center;
+   font-size: 0.6em;
+   line-height: 1.2em;
+   text-align: center;
  }
 
  .reveal .row::after {
-  content: "";
-  display: table;
-  clear: both;
+   content: "";
+   display: table;
+   clear: both;
  }
 
  .reveal .column {
-  float: left;
-  width: 50%;
+   float: left;
+   width: 50%;
  }
  
  /*********************************************

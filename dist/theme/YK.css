@@ -19,7 +19,7 @@
    --r-block-margin: 20px;
    --r-heading-margin: 0 0 20px 0;
    --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
-   --r-heading-color: #222;
+   --r-heading-color: #444;
    --r-heading-line-height: 1.2;
    --r-heading-letter-spacing: normal;
    --r-heading-text-transform: uppercase;
@@ -33,9 +33,11 @@
    --r-code-font: monospace;
    --r-link-color: #2a76dd;
    --r-link-color-dark: #1a53a1;
-   --r-link-color-hover: #8290a3;
+   --r-link-color-hover: #6ca0e8;
    --r-selection-background-color: #98bdef;
    --r-selection-color: #fff;
+   --r-overlay-element-bg-color: 0, 0, 0;
+   --r-overlay-element-fg-color: 240, 240, 240;
  }
  
  .reveal-viewport {
@@ -142,6 +144,7 @@
  
  .reveal strong,
  .reveal b {
+    color: var(--r-heading-color);
    font-weight: bold;
  }
  
@@ -206,9 +209,9 @@
  .reveal blockquote {
    display: block;
    position: relative;
-   width: 70%;
+   width: 780px;
    margin: var(--r-block-margin) auto;
-   padding: 5px;
+   padding: 6px;
    font-style: italic;
    background: rgba(255, 255, 255, 0.05);
    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);

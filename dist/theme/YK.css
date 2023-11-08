@@ -325,6 +325,10 @@
    margin: var(--r-block-margin) 0;
  }
 
+ .reveal mjx-container[jax="SVG"][display="true"] {
+   margin: var(--r-block-margin) 0;
+ }
+
  .reveal p img {
    border: none; 
    display: block; 

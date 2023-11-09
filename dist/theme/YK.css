@@ -322,7 +322,8 @@
  }
  
  .reveal img {
-   margin: var(--r-block-margin) 0;
+   display: block; 
+   margin: var(--r-block-margin) auto;
  }
 
  .reveal mjx-container[jax="SVG"][display="true"] {
@@ -331,8 +332,8 @@
 
  .reveal p img {
    border: none; 
-   display: block; 
-   margin: var(--r-block-margin) auto;
+   display: inline;
+   margin: 0 auto;
  }
 
  .reveal p.caption {
